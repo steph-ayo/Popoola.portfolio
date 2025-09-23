@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className="py-28">
       <div className="border border-red-600 container max-w-7xl mx-auto px-4">
-        <div className="border border-red-600 max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center">
           {/* Hero header text */}
           <motion.span
             className="font-bold mb-6 "
@@ -21,7 +21,7 @@ export default function Hero() {
               HELLO, I AM
             </motion.h3>
             <motion.h1
-              className="text-primary text-9xl md:text-6xl max-w-full justify-self-start"
+              className="text-primary text-6xl max-w-full justify-self-start"
               {...fadeIn}
               transition={{ delay: 0.8 }}
             >
@@ -31,7 +31,7 @@ export default function Hero() {
 
           {/* Hero paragraph text */}
           <motion.p
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 justify-self-end"
+            className=" text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 justify-self-end"
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
@@ -40,7 +40,7 @@ export default function Hero() {
 
           {/* Hero icon links */}
           <motion.div
-            className="flex justify-center space-x-4 mb-8"
+            className="border border-red-600 flex justify-center space-x-4 mb-8"
             {...fadeInUp}
             transition={{ delay: 0.5 }}
           >
@@ -78,7 +78,7 @@ export default function Hero() {
 
           {/* Hero buttons */}
           <motion.div
-            className="flex flex-col md:flex-row justify-center gap-4"
+            className="border border-red-600 flex flex-col md:flex-row justify-center gap-4"
             {...fadeInUp}
             transition={{ delay: 0.6 }}
           >
