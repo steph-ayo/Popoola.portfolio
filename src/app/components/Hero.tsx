@@ -1,5 +1,6 @@
 "use client";
 
+import ParticlesComponent from "../components/Particles";
 import Link from "next/link";
 import Image from "next/image";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -8,8 +9,8 @@ import { fadeInUp, fadeIn, scaleIn } from "../../utils/animations";
 
 export default function Hero() {
   return (
-    <section className="py-28">
-      <div className="border border-red-600 container max-w-7xl mx-auto px-4">
+    <section className="py-28 border border-red-600">
+      <div className="container max-w-7xl mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           {/* Hero header text */}
           <motion.span
@@ -31,21 +32,21 @@ export default function Hero() {
 
           {/* Hero paragraph text */}
           <motion.p
-            className=" text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 justify-self-end"
+            className=" text-xl md:text-2xl text-gray-600 dark:text-gray-300 mt-4 mb-8 justify-self-end"
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
-            A FRONTEND ENGINEER
+            A FRONTEND DEVELOPER
           </motion.p>
 
           {/* Hero icon links */}
           <motion.div
-            className="border border-red-600 flex justify-center space-x-4 mb-8"
+            className="flex justify-center space-x-4 mb-8"
             {...fadeInUp}
             transition={{ delay: 0.5 }}
           >
             <motion.a
-              href="https://github.com"
+              href="https://github.com/steph-ayo"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
@@ -55,7 +56,7 @@ export default function Hero() {
               <FaGithub />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/stephen-popoola-b90990233"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
@@ -65,7 +66,7 @@ export default function Hero() {
               <FaLinkedin />
             </motion.a>
             <motion.a
-              href="https://twitter.com"
+              href="https://x.com/ayo_omopopoola"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
@@ -78,7 +79,7 @@ export default function Hero() {
 
           {/* Hero buttons */}
           <motion.div
-            className="border border-red-600 flex flex-col md:flex-row justify-center gap-4"
+            className="flex flex-col md:flex-row justify-center gap-4"
             {...fadeInUp}
             transition={{ delay: 0.6 }}
           >
@@ -101,6 +102,7 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
+      <ParticlesComponent />
     </section>
   );
 }
