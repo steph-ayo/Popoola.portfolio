@@ -7,7 +7,7 @@ import { fadeInUp, fadeIn, scaleIn } from "../../utils/animations";
 
 const GetInTouch = () => {
   return (
-    <section>
+    <section className="border border-red-600">
       <h1>
         <Link href="/">Get in touch</Link>
       </h1>
