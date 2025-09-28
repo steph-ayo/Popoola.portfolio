@@ -103,12 +103,12 @@ const ParticlesComponent = (props) => {
   );
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="absolute inset-0">
       <Particles
-        id={props.id}
+        id={props.id || "tsparticles"}
         init={particlesLoaded}
         options={options}
-        className="absolute top-0 left-0 w-full h-full -z-10"
+        className="absolute w-full h-full -z-10"
       />
       ;
     </div>

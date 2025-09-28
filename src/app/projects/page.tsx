@@ -6,6 +6,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, cardHoverSmall } from "@/utils/animations";
 import Footer from "../components/Footer";
+import GetInTouch from "../components/GetInTouch";
 
 export default function Projects() {
   return (
@@ -111,6 +112,7 @@ export default function Projects() {
           </motion.div>
         </div>
       </section>
+      <GetInTouch />
       <Footer />
     </>
   );

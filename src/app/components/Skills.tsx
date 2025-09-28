@@ -15,13 +15,17 @@ const Skills = () => {
   return (
     <section>
       {/* Skills Section */}
-      <motion.section className="mb-16" {...fadeIn} transition={{ delay: 0.2 }}>
+      <motion.section
+        className="mb-12 p-10 bg-white dark:bg-dark shadow-md"
+        {...fadeIn}
+        transition={{ delay: 0.2 }}
+      >
         <motion.h2 className="section-title" {...fadeInUp}>
           Skills
         </motion.h2>
         <motion.div
           //   className="border border-red-600 not-first:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          className="flex flex-col md:flex-row justify-center gap-6"
+          className="flex flex-col md:flex-row justify-around"
           variants={staggerContainer}
           initial="initial"
           animate="animate"

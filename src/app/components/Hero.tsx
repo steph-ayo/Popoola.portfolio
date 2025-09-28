@@ -9,7 +9,7 @@ import { fadeInUp, fadeIn, scaleIn } from "../../utils/animations";
 
 export default function Hero() {
   return (
-    <section className="py-28 border border-red-600">
+    <section className="relative overflow-hidden py-28 border border-red-600">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="max-w-2xl mx-auto text-center">
           {/* Hero header text */}
