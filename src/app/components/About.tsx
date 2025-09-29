@@ -26,32 +26,30 @@ export default function About() {
       </motion.h1>
 
       {/* Bio Section */}
-      <div className="flex flex-col md:flex-row size-full ">
+      <div className="flex flex-col md:flex-row size-full gap-10  bg-white dark:bg-dark/50 rounded-t-full md:rounded-l-full ">
         <motion.div
-          className="flex justify-center items-center md:w-2/5"
+          className="md:w-2/5"
           {...scaleIn}
           transition={{ delay: 0.2 }}
         >
           <Image
             src={popoola}
             alt="Profile"
-            width={100}
-            height={100}
-            className="p-6 size-full object-cover "
+            className="p-10 object-cover rounded-t-full md:rounded-full"
           />
         </motion.div>
 
         <motion.div className=" md:w-3/5 grid place-items-center" {...fadeInUp}>
-          <p className="text-lg text-secondary dark:text-white max-w-3xl mx-auto text-center">
-            I&apos;m a passionate Full Stack Developer with expertise in
-            building modern web applications. With a strong foundation in both
-            frontend and backend technologies, I create seamless user
-            experiences and robust server-side solutions.
+          <p className="text-md md:text-lg text-secondary dark:text-white max-w-3xl mx-auto text-center mb-10">
+            I&apos;m a passionate Frontend Developer with expertise in building
+            modern web applications. With a strong foundation in both frontend
+            and backend technologies, I create seamless user experiences and
+            robust server-side solutions.
           </p>
 
           {/* Hero buttons */}
           <motion.div
-            className="flex flex-col md:flex-row justify-center gap-4"
+            className="flex flex-row justify-center gap-4"
             {...fadeInUp}
             transition={{ delay: 0.6 }}
           >

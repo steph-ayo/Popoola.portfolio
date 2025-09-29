@@ -3,36 +3,36 @@
 import ParticlesComponent from "../components/Particles";
 import Link from "next/link";
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeIn, scaleIn } from "../../utils/animations";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-28 border border-red-600">
+    <section className="relative py-28">
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           {/* Hero header text */}
-          <motion.span
-            className="font-bold mb-6 "
+          <motion.div
+            className="font-bold mb-10"
             {...fadeInUp}
             transition={{ delay: 0.3 }}
           >
-            <motion.h3 className="text-xl md:text-xl justify-self-start">
+            <motion.h3 className="text-lg md:text-2xl justify-self-start mb-5">
               HELLO, I AM
             </motion.h3>
             <motion.h1
-              className="text-primary text-6xl max-w-full justify-self-start"
+              className="text-primary text-4xl md:text-7xl max-w-full justify-center"
               {...fadeIn}
               transition={{ delay: 0.8 }}
             >
               Popoola Stephen
             </motion.h1>
-          </motion.span>
+          </motion.div>
 
           {/* Hero paragraph text */}
           <motion.p
-            className=" text-xl md:text-2xl text-gray-600 dark:text-gray-300 mt-4 mb-8 justify-self-end"
+            className=" text-lg md:text-2xl text-gray-600 dark:text-gray-300 mt-4 mb-8 justify-self-end"
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
@@ -41,7 +41,7 @@ export default function Hero() {
 
           {/* Hero icon links */}
           <motion.div
-            className="flex justify-center space-x-4 mb-8"
+            className="flex justify-center space-x-4 mt-30 mb-8"
             {...fadeInUp}
             transition={{ delay: 0.5 }}
           >
@@ -49,7 +49,7 @@ export default function Hero() {
               href="https://github.com/steph-ayo"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
+              className="z-10 text-2xl cursor-pointer text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -73,32 +73,25 @@ export default function Hero() {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
-              <FaTwitter />
+              <FaXTwitter />
             </motion.a>
           </motion.div>
 
-          {/* Hero buttons */}
+          {/* Hero icon buttons */}
+
           <motion.div
-            className="flex flex-col md:flex-row justify-center gap-4"
+            className="justify-center"
             {...fadeInUp}
             transition={{ delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="/projects"
-                className="bg-primary inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                View Projects
-              </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="/contact"
-                className=" inline-block w-full bg-gray-500  md:w-auto text-gray-800 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-              >
-                contact
-              </Link>
-            </motion.div>
+            <Link
+              href="/contact"
+              className="bg-primary inline-block md:w-auto text-white px-8 py-3 rounded-3xl hover:bg-primary/90 transition-colors"
+            >
+              contact me
+            </Link>
           </motion.div>
         </div>
       </div>

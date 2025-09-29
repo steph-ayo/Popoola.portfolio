@@ -7,14 +7,15 @@ import { fadeInUp, fadeIn, scaleIn } from "../../utils/animations";
 
 const GetInTouch = () => {
   return (
-    <section className=" p-10 gap-10 flex flex-col md:flex-col lg:flex-row justify-between">
+    <section className="p-10 mb-15 mt-15 gap-10 flex flex-col md:flex-col lg:flex-row justify-between">
       <div>
+        <h3 className="text-xl mb-4">Based in Lagos, working worldwide.</h3>
         <h1 className="text-4xl md:text-7xl underline">
           <Link href="/">Get in touch</Link>
         </h1>
       </div>
 
-      <div className="w-full md:w-3/5 gap-10 flex flex-col md:flex-row md:justify-between lg:justify-around">
+      <div className="w-full md:w-3/5 gap-10 flex flex-row md:flex-row justify-around">
         {/* Socials */}
         <div className="gap-4">
           <h3 className="text-xl mb-6">Socials</h3>

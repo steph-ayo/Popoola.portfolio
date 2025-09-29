@@ -103,14 +103,13 @@ const ParticlesComponent = (props) => {
   );
 
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 -z-10">
       <Particles
         id={props.id || "tsparticles"}
         init={particlesLoaded}
         options={options}
-        className="absolute w-full h-full -z-10"
+        className="absolute w-full h-full"
       />
-      ;
     </div>
   );
 };
