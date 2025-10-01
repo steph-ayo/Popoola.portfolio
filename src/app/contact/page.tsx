@@ -64,13 +64,13 @@ export default function Contact() {
     <>
       <div className="container max-w-7xl mx-auto py-12 border-b border-gray-200 dark:border-gray-600 ">
         <motion.h1
-          className="text-4xl font-bold mb-8 text-center"
+          className="text-3xl font-bold mb-8 text-center"
           {...fadeInUp}
         >
           Contact Me
         </motion.h1>
 
-        <motion.p className="mb-8">
+        <motion.p className="text-sm md:text-lg mb-8 dark:text-gray-400">
           Let’s connect! Whether you’re looking for collaboration, have a
           question, or just want to chat, feel free to reach out. I’d love to
           hear from you!
@@ -100,10 +100,11 @@ export default function Contact() {
                   type="text"
                   id="name"
                   name="name"
+                  placeholder="Enter your name"
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-md placeholder:text-sm placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
               </motion.div>
 
@@ -118,10 +119,11 @@ export default function Contact() {
                   type="email"
                   id="email"
                   name="email"
+                  placeholder="Enter your Email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-md placeholder:text-sm placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
               </motion.div>
 
@@ -135,18 +137,19 @@ export default function Contact() {
                 <textarea
                   id="message"
                   name="message"
+                  placeholder="Enter your message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-md placeholder:text-sm placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
               </motion.div>
 
               <motion.button
                 type="submit"
                 disabled={status === "loading"}
-                className="btn btn-primary"
+                className="btn btn-primary text-sm md:text-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

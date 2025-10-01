@@ -13,11 +13,11 @@ import {
   cardHoverSmall,
   scaleIn,
 } from "@/utils/animations";
-import popoola from "../../../public/popoola.jpg";
+import popoola from "../../../public/ay.png";
 
 export default function About() {
   return (
-    <section className="container max-w-7xl mx-auto py-12 mb-16">
+    <section className="container max-w-7xl mx-auto py-10 bg-white dark:bg-dark/50">
       <motion.h1
         className="text-4xl font-bold mb-8 text-center"
         {...fadeInDown}
@@ -26,7 +26,7 @@ export default function About() {
       </motion.h1>
 
       {/* Bio Section */}
-      <div className="flex flex-col md:flex-row size-full gap-10  bg-white dark:bg-dark/50 rounded-t-full md:rounded-l-full ">
+      <div className="flex flex-col md:flex-row size-full gap-10  ">
         <motion.div
           className="md:w-2/5"
           {...scaleIn}
@@ -35,7 +35,9 @@ export default function About() {
           <Image
             src={popoola}
             alt="Profile"
-            className="p-10 object-cover rounded-t-full md:rounded-full"
+            width={400}
+            height={400}
+            className="w-80 h-100 justify-self-center border-8 border-gray-600 rounded-full"
           />
         </motion.div>
 

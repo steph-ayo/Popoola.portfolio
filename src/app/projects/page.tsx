@@ -14,13 +14,16 @@ export default function Projects() {
       <section className="py-20 border-b border-gray-200 dark:border-gray-600 ">
         <div className="container max-w-7xl mx-auto px-4">
           <motion.h2
-            className="text-3xl font-bold mb-6 text-center"
+            className="text-4xl font-bold mb-6 text-center"
             {...fadeInUp}
           >
             Featured Projects
           </motion.h2>
 
-          <motion.p className="text-sm mb-12 text-center" {...fadeInUp}>
+          <motion.p
+            className="text-sm md:text-lg mb-12 dark:text-gray-400 text-center"
+            {...fadeInUp}
+          >
             A glimpse into projects I’ve have worked on
           </motion.p>
 
