@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaCode, FaLaptopCode, FaGraduationCap } from "react-icons/fa";
+import { MdFileDownload } from "react-icons/md";
 import { motion } from "framer-motion";
 import {
   fadeInUp,
@@ -14,18 +15,12 @@ import {
   scaleIn,
 } from "@/utils/animations";
 import popoola from "../../../public/ay.png";
+import CV from "../../../public/assets";
 
 export default function About() {
   return (
-    <section className="container max-w-7xl mx-auto py-10 bg-white dark:bg-dark/50">
-      <motion.h1
-        className="text-4xl font-bold mb-8 text-center"
-        {...fadeInDown}
-      >
-        About Me
-      </motion.h1>
-
-      {/* Bio Section */}
+    <section className="container max-w-7xl mx-auto py-15 bg-white dark:bg-dark/50">
+      {/* About Image */}
       <div className="flex flex-col md:flex-row size-full gap-10  ">
         <motion.div
           className="md:w-2/5"
@@ -41,34 +36,43 @@ export default function About() {
           />
         </motion.div>
 
-        <motion.div className=" md:w-3/5 grid place-items-center" {...fadeInUp}>
-          <p className="text-md md:text-lg text-secondary dark:text-white max-w-3xl mx-auto text-center mb-10">
-            I&apos;m a passionate Frontend Developer with expertise in building
-            modern web applications. With a strong foundation in both frontend
-            and backend technologies, I create seamless user experiences and
-            robust server-side solutions.
+        {/* About Bio */}
+        <motion.div className=" md:w-3/5" {...fadeInUp}>
+          <motion.h1 className="text-4xl font-bold mb-4" {...fadeInDown}>
+            About Me
+          </motion.h1>
+
+          <p className="text-sm md:text-base font-light  text-secondary dark:text-white max-w-3xl mx-auto mb-10">
+            As an experienced front-end engineer with about 2 years of
+            expertise, I excel in initiating and leading successful projects,
+            thriving in dynamic, fast-paced environments.
+            <br />
+            <br />
+            Whether collaborating within a team or working independently, I
+            demonstrate exceptional adaptability and proficiency. My enthusiasm
+            for learning drives me to craft impactful solutions that drive
+            progress and deliver tangible outcomes. I am committed to continuous
+            growth and development in the ever-evolving technological landscape,
+            ready to contribute effectively to any organization.
+            <br />
+            <br />
+            When not coding, I am also a scratch tutor and singer.
           </p>
 
-          {/* Hero buttons */}
+          {/* About buttons */}
           <motion.div
-            className="flex flex-row justify-center gap-4"
+            className="flex flex-row gap-4"
             {...fadeInUp}
             transition={{ delay: 0.6 }}
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="/projects"
-                className="bg-primary inline-block w-full md:w-auto text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+                href={CV}
+                download
+                className="bg-primary flex flex-row gap-2 w-full md:w-auto text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
               >
                 Download CV
-              </Link>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Link
-                href="/projects"
-                className="bg-primary inline-block w-full md:w-auto text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                Hire me
+                <MdFileDownload />
               </Link>
             </motion.div>
           </motion.div>
