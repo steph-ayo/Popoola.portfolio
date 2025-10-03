@@ -16,6 +16,7 @@ const Skills = () => {
     <section>
       {/* Skills Section */}
       <motion.section
+        id="skills"
         className="mb-12 p-10 bg-white dark:bg-dark/50 shadow-md"
         {...fadeIn}
         transition={{ delay: 0.2 }}
@@ -38,15 +39,15 @@ const Skills = () => {
             <FaCode className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
             <ul className="text-secondary space-y-2 md:flex flex-row gap-8">
-              <li>React / Next.js</li>
+              <li>React.js/vite</li>
+              <li>Next.js</li>
               <li>TypeScript</li>
               <li>Tailwind CSS</li>
-              <li>HTML5 / CSS3</li>
             </ul>
           </motion.div>
 
           <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-dark p-6 rounded-lg shadow-md"
             variants={fadeInUp}
             {...cardHover}
           >

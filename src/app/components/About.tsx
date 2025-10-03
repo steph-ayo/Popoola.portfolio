@@ -15,7 +15,6 @@ import {
   scaleIn,
 } from "@/utils/animations";
 import popoola from "../../../public/ay.png";
-import CV from "../../../public/assets";
 
 export default function About() {
   return (
@@ -67,7 +66,7 @@ export default function About() {
           >
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href={CV}
+                href="/assets/POPOOLA.cv.pdf"
                 download
                 className="bg-primary flex flex-row gap-2 w-full md:w-auto text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
               >
