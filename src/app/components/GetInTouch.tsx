@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const GetInTouch = () => {
   return (
-    <section className="p-10 mb-15 mt-15 gap-10 flex flex-col md:flex-col lg:flex-row justify-between">
+    <section className="p-5 mb-15 mt-15 gap-10 flex flex-col md:flex-col lg:flex-row justify-between">
       <div className="">
         <h3 className="text-lg md:text-xl mb-4">
           Based in Lagos, working worldwide.
@@ -17,7 +17,7 @@ const GetInTouch = () => {
         </h1>
       </div>
 
-      <div className="w-full md:w-3/5 gap-10 flex flex-row md:flex-row gap-20 md:gap-40 lg:pl-20">
+      <div className="w-full md:w-3/5 flex flex-row md:flex-row gap-15 md:gap-40 lg:pl-20">
         {/* Socials */}
         <div className="gap-4">
           <h3 className="text-lg md:text-xl font-semibold mb-6">Socials</h3>
