@@ -2,18 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { FaCode, FaLaptopCode, FaGraduationCap } from "react-icons/fa";
+
 import { MdFileDownload } from "react-icons/md";
 import { motion } from "framer-motion";
-import {
-  fadeInUp,
-  fadeInDown,
-  fadeIn,
-  staggerContainer,
-  cardHover,
-  cardHoverSmall,
-  scaleIn,
-} from "@/utils/animations";
+import { fadeInUp, fadeInDown, scaleIn } from "@/utils/animations";
 import popoola from "../../../public/ay.png";
 
 export default function About() {

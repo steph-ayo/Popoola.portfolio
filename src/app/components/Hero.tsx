@@ -2,10 +2,10 @@
 
 import ParticlesComponent from "../components/Particles";
 import Link from "next/link";
-import Image from "next/image";
+
 import { FaEnvelope, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { fadeInUp, fadeIn, scaleIn } from "../../utils/animations";
+import { fadeInUp, fadeIn } from "../../utils/animations";
 
 export default function Hero() {
   return (

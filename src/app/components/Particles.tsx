@@ -8,7 +8,11 @@ import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSl
 import { useTheme } from "../context/ThemeContext";
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-const ParticlesComponent = (props) => {
+type ParticlesProps = {
+  id?: string;
+};
+
+const ParticlesComponent: React.FC<ParticlesProps> = ({ id }) => {
   const [init, setInit] = useState(false);
   const { theme } = useTheme();
   // this should be run only once per application lifetime
@@ -26,7 +30,7 @@ const ParticlesComponent = (props) => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
+  const particlesLoaded = (container: unknown) => {
     console.log(container);
   };
 
@@ -105,7 +109,7 @@ const ParticlesComponent = (props) => {
   return (
     <div className="absolute inset-0 -z-10">
       <Particles
-        id={props.id || "tsparticles"}
+        id={id || "tsparticles"}
         init={particlesLoaded}
         options={options}
         className="absolute w-full h-full"

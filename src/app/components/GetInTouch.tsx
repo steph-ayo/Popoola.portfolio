@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { fadeInUp, fadeIn, scaleIn } from "../../utils/animations";
+// import { fadeInUp, fadeIn, scaleIn } from "../../utils/animations";
 
 const GetInTouch = () => {
   return (

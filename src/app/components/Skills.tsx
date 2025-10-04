@@ -1,14 +1,14 @@
 "use client";
-import { FaCode, FaLaptopCode, FaGraduationCap } from "react-icons/fa";
+import { FaCode, FaGraduationCap } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import {
   fadeInUp,
-  fadeInDown,
+  // fadeInDown,
   fadeIn,
   staggerContainer,
   cardHover,
-  cardHoverSmall,
+  // cardHoverSmall,
 } from "@/utils/animations";
 
 const Skills = () => {
