@@ -1,6 +1,6 @@
 "use client";
 
-import ParticlesComponent from "../components/Particles";
+// import ParticlesComponent from "../components/Particles";
 import Link from "next/link";
 
 import { FaEnvelope, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
@@ -108,7 +108,7 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-      <ParticlesComponent />
+      {/* <ParticlesComponent /> */}
     </section>
   );
 }
