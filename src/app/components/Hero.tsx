@@ -24,7 +24,7 @@ export default function Hero() {
             <motion.h1
               className="text-primary text-4xl md:text-7xl font-semibold max-w-full"
               {...fadeIn}
-              transition={{ delay: 0.8 }}
+              transition={{ delay: 0.6 }}
             >
               Popoola Stephen
             </motion.h1>
@@ -34,7 +34,7 @@ export default function Hero() {
           <motion.p
             className=" text-lg md:text-2xl font-normal text-gray-600 dark:text-gray-300 mt-4 mb-8"
             {...fadeInUp}
-            transition={{ delay: 0.4 }}
+            transition={{ delay: 0.8 }}
           >
             A Frontend Engineer
           </motion.p>
@@ -46,7 +46,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="flex flex-row gap-2 z-10 text-xl md:justify-center cursor-pointer text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
             {...fadeInUp}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 1.0 }}
           >
             <FaEnvelope />
             <p className="text-sm md:text-lg">popoolastephen19@gmail.com</p>
