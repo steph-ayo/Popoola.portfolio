@@ -90,21 +90,21 @@ import {
 } from "@/utils/animations";
 
 const icons = [
+  { icon: <SiCss3 className="text-blue-400" />, name: "CSS3" },
+  { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind" },
   { icon: <SiReact className="text-sky-400" />, name: "React" },
+  { icon: <SiVite className="text-purple-500" />, name: "Vite" },
   {
     icon: <SiNextdotjs className="text-black dark:text-white" />,
     name: "Next.js",
   },
   { icon: <SiTypescript className="text-blue-500" />, name: "TypeScript" },
-  { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind" },
+  { icon: <SiFramer className="text-pink-500" />, name: "Framer Motion" },
   { icon: <SiGit className="text-orange-500" />, name: "Git" },
   {
     icon: <SiGithub className="text-gray-800 dark:text-gray-100" />,
     name: "GitHub",
   },
-  { icon: <SiCss3 className="text-blue-400" />, name: "CSS3" },
-  { icon: <SiFramer className="text-pink-500" />, name: "Framer" },
-  { icon: <SiVite className="text-purple-500" />, name: "Vite" },
 ];
 
 const Skills = () => {
@@ -126,30 +126,33 @@ const Skills = () => {
       </motion.h2>
 
       <div className="relative space-y-16">
+        {/* Top row */}
         <motion.div
-          className="flex gap-20 justify-around"
+          className="flex gap-15 justify-around cursor-grab active:cursor-grabbing"
+          drag="x" // ← enables horizontal dragging
+          dragConstraints={{ left: -300, right: 300 }} // limits how far you can drag
           animate={{
-            x: ["0%", "-100%"],
+            x: ["10%", "-100%"],
           }}
           transition={{
             x: {
               repeat: Infinity,
               repeatType: "loop",
-              duration: 30,
+              duration: 25, // slower movement for better UX
               ease: "linear",
             },
           }}
         >
-          {[...icons, ...icons].map((skill, i) => (
+          {icons.map((skill, i) => (
             <motion.div
               key={`top-${i}`}
               whileHover={{
                 scale: 1.4,
                 rotate: 10,
                 y: -10,
-                filter: "drop-shadow(0px 0px 15px rgba(0,255,255,0.8))",
+                filter: "drop-shadow(0px 0px 15px rgba(40, 139, 247,0.8))",
               }}
-              className="flex flex-col items-center justify-center text-6xl cursor-pointer"
+              className="flex flex-col items-center justify-center text-5xl cursor-pointer"
               style={{ perspective: 1000 }}
             >
               <motion.div
@@ -168,6 +171,50 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Bottom row (opposite direction, slower, tilted) */}
+        {/* <motion.div
+          className="flex gap-10 justify-around rotate-1"
+          animate={{
+            x: ["-100%", "0%"],
+          }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 40,
+              ease: "linear",
+            },
+          }}
+        >
+          {icons.map((skill, i) => (
+            <motion.div
+              key={`bottom-${i}`}
+              whileHover={{
+                scale: 1.3,
+                rotate: -10,
+                y: 10,
+                filter: "drop-shadow(0px 0px 12px rgba(255,255,255,1))",
+              }}
+              className="flex flex-col items-center justify-center text-5xl cursor-pointer"
+              style={{ perspective: 1000 }}
+            >
+              <motion.div
+                animate={{
+                  rotateY: [360, 0],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 18,
+                  ease: "linear",
+                }}
+              >
+                {skill.icon}
+              </motion.div>
+              <span className="text-sm text-gray-400 mt-2">{skill.name}</span>
+            </motion.div>
+          ))}
+        </motion.div> */}
       </div>
     </section>
   );

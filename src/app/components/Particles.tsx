@@ -32,7 +32,7 @@ export default function ParticlesComponent() {
         particles: {
           color: { value: theme === "dark" ? "#ffffff" : "#288bf7" },
           links: {
-            color: theme === "dark" ? "#ffffff" : "#288bf7;",
+            color: { value: theme === "dark" ? "#ffffff" : "#288bf7" },
             distance: 120,
             enable: true,
             opacity: 0.2,
@@ -46,7 +46,7 @@ export default function ParticlesComponent() {
             speed: 1,
             straight: false,
           },
-          number: { density: { enable: true, area: 800 }, value: 90 },
+          number: { density: { enable: true, area: 800 }, value: 150 },
           opacity: { value: 0.2 },
           shape: { type: "circle" },
           size: { value: { min: 1, max: 3 } },
