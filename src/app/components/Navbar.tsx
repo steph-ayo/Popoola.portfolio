@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const menuItems = [
     { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
+    { href: "/projects", label: "Porfolio" },
     { href: "/contact", label: "Contact" },
   ];
   return (
