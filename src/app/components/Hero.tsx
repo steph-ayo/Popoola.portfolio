@@ -1,30 +1,47 @@
 "use client";
 
-// import ParticlesComponent from "../components/Particles";
+import ParticlesComponent from "../components/Particles";
 import Link from "next/link";
 
 import { FaEnvelope, FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { fadeInUp, fadeIn } from "../../utils/animations";
+import {
+  fadeInUp,
+  fadeIn,
+  fadeInDown,
+  slideInLeft,
+  slideInRight,
+  scaleIn,
+  staggerContainer,
+} from "../../utils/animations";
 
 export default function Hero() {
   return (
-    <section className="relative pt-28 pb-17">
+    <section className="relative pt-28 pb-17 overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <ParticlesComponent />
+      </div>
+
       <div className="container max-w-7xl mx-auto px-6">
-        <div className=" max-w-3xl mx-auto text-left md:text-center">
+        <motion.div
+          className=" max-w-3xl mx-auto text-left md:text-center"
+          variants={staggerContainer}
+          initial="initial"
+          animate="animate"
+        >
           {/* Hero header text */}
-          <motion.div
-            className="font-bold mb-7"
-            {...fadeInUp}
-            transition={{ delay: 0.3 }}
-          >
-            <motion.h3 className="text-lg md:text-2xl font-thin mb-5">
+          <motion.div className="font-bold mb-7" variants={fadeInUp}>
+            <motion.h3
+              className="text-lg md:text-2xl font-thin mb-5"
+              variants={slideInLeft}
+              transition={{ delay: 0.1 }}
+            >
               HELLO, I AM
             </motion.h3>
             <motion.h1
               className="text-primary text-4xl md:text-7xl font-semibold max-w-full"
-              {...fadeIn}
-              transition={{ delay: 0.6 }}
+              {...scaleIn}
+              transition={{ delay: 0.5, type: "spring", stiffness: 120 }}
             >
               Popoola Stephen
             </motion.h1>
@@ -46,7 +63,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="flex flex-row gap-2 z-10 text-xl md:justify-center cursor-pointer text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
             {...fadeInUp}
-            transition={{ delay: 1.0 }}
+            transition={{ delay: 0.7 }}
           >
             <FaEnvelope />
             <p className="text-sm md:text-lg">popoolastephen19@gmail.com</p>
@@ -56,7 +73,7 @@ export default function Hero() {
           <motion.div
             className="flex justify-center space-x-4 mt-30 mb-8"
             {...fadeInUp}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.9 }}
           >
             <motion.a
               href="https://github.com/steph-ayo"
@@ -90,12 +107,12 @@ export default function Hero() {
             </motion.a>
           </motion.div>
 
-          {/* Hero icon buttons */}
+          {/* Hero icon button */}
 
           <motion.div
             className="text-center"
             {...fadeInUp}
-            transition={{ delay: 0.6 }}
+            transition={{ delay: 1.1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -106,7 +123,7 @@ export default function Hero() {
               contact me
             </Link>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
       {/* <ParticlesComponent /> */}
     </section>

@@ -6,14 +6,14 @@ import Image from "next/image";
 import { MdFileDownload } from "react-icons/md";
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInDown, scaleIn } from "@/utils/animations";
-import popoola from "../../../public/ay.png";
+import popoola from "../../../public/popoola.jpg";
 
 export default function About() {
   return (
     <section className="container max-w-7xl mx-auto py-15 bg-white dark:bg-dark/50">
       {/* About Image */}
       <div className="flex flex-col md:flex-row size-full gap-10  ">
-        <motion.div
+        {/* <motion.div
           className="md:w-2/5"
           {...scaleIn}
           transition={{ delay: 0.2 }}
@@ -25,6 +25,30 @@ export default function About() {
             height={400}
             className="w-80 h-100 justify-self-center border-8 border-gray-600 rounded-full"
           />
+        </motion.div> */}
+
+        <motion.div
+          className="md:w-2/5 relative flex justify-center"
+          {...scaleIn}
+          transition={{ delay: 0.2 }}
+        >
+          {/* Glow Circle Behind */}
+          <div className="absolute w-80 h-80 rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-blue-400 opacity-30 -z-10 animate-pulse"></div>
+
+          {/* Floating Profile Image */}
+          <motion.div
+            className="w-80 h-80 rounded-full overflow-hidden shadow-2xl"
+            whileHover={{ scale: 1.05, rotate: 3 }}
+            whileTap={{ scale: 0.95, rotate: 0 }}
+          >
+            <Image
+              src={popoola}
+              alt="Profile"
+              width={400}
+              height={400}
+              className="object-cover w-full h-full"
+            />
+          </motion.div>
         </motion.div>
 
         {/* About Bio */}
@@ -34,20 +58,21 @@ export default function About() {
           </motion.h1>
 
           <p className="text-sm md:text-base font-light  text-secondary dark:text-white max-w-3xl mx-auto mb-10">
-            As an experienced front-end engineer with about 2 years of
-            expertise, I excel in initiating and leading successful projects,
-            thriving in dynamic, fast-paced environments.
+            As a Frontend Engineer with over 2 years of experience, I specialize
+            in building clean, responsive, and user-focused web experiences that
+            not only look great but feel right to use. I thrive in fast-paced
+            environments, adapting quickly and leading projects with precision
+            and creativity.
             <br />
             <br />
-            Whether collaborating within a team or working independently, I
-            demonstrate exceptional adaptability and proficiency. My enthusiasm
-            for learning drives me to craft impactful solutions that drive
-            progress and deliver tangible outcomes. I am committed to continuous
-            growth and development in the ever-evolving technological landscape,
-            ready to contribute effectively to any organization.
+            I don’t claim to know everything, the best developers don’t; but I
+            know how to find the right answers fast and build solutions that
+            work. My passion for learning and growth drives me to deliver
+            impactful results and meaningful user experiences.
             <br />
             <br />
-            When not coding, I am also a scratch tutor and singer.
+            When not coding, I am also a scratch tutor and an award winning
+            singer.
           </p>
 
           {/* About buttons */}

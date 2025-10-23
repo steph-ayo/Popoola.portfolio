@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 interface ContactRequestBody {
   name: string;
@@ -8,13 +9,33 @@ interface ContactRequestBody {
 
 export async function POST(request: Request) {
   try {
-    (await request.json()) as ContactRequestBody;
-    // Here you would typically:
-    // 1. Validate the input
-    // 2. Send an email using a service like SendGrid, AWS SES, etc.
-    // 3. Store the message in a database if needed
+    const { name, email, message } =
+      (await request.json()) as ContactRequestBody;
 
-    // For now, we'll just simulate a successful response
+    // Create transporter
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    // Prepare email content
+    const mailOptions = {
+      from: process.env.EMAIL_USER,
+      to: process.env.TO_EMAIL,
+      subject: `New Message from ${name}`,
+      text: `
+        Name: ${name}
+        Email: ${email}
+        Message: ${message}
+      `,
+    };
+
+    // Send the email
+    await transporter.sendMail(mailOptions);
+
     return NextResponse.json(
       { message: "Message sent successfully" },
       { status: 200 }
