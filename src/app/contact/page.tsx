@@ -3,13 +3,7 @@
 import { useState } from "react";
 
 import { motion } from "framer-motion";
-import {
-  fadeInUp,
-  fadeIn,
-  // slideInLeft,
-  // slideInRight,
-  fadeInDown,
-} from "@/utils/animations";
+import { fadeInUp, fadeIn, fadeInDown } from "@/utils/animations";
 import GetInTouch from "../components/GetInTouch";
 import Footer from "../components/Footer";
 

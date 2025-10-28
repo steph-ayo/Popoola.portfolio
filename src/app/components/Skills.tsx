@@ -1,71 +1,3 @@
-// "use client";
-// import { FaCode, FaGraduationCap } from "react-icons/fa";
-// import { motion } from "framer-motion";
-
-// import {
-//   fadeInUp,
-//   // fadeInDown,
-//   fadeIn,
-//   staggerContainer,
-//   cardHover,
-//   // cardHoverSmall,
-// } from "@/utils/animations";
-
-// const Skills = () => {
-//   return (
-//     <section>
-//       {/* Skills Section */}
-//       <motion.section
-//         id="skills"
-//         className="mb-12 p-10 bg-white dark:bg-dark/50 shadow-md"
-//         {...fadeIn}
-//         transition={{ delay: 0.2 }}
-//       >
-//         <motion.h2 className="section-title" {...fadeInUp}>
-//           My Skills
-//         </motion.h2>
-//         <motion.div
-//           //   className="border border-red-600 not-first:max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-//           className="flex flex-col gap-6"
-//           variants={staggerContainer}
-//           initial="initial"
-//           animate="animate"
-//         >
-//           <motion.div
-//             className="bg-white dark:bg-dark p-6 rounded-lg shadow-md"
-//             variants={fadeInUp}
-//             {...cardHover}
-//           >
-//             <FaCode className="h-8 w-8 text-primary mb-4" />
-//             <h3 className="text-xl font-semibold mb-2">Frontend</h3>
-//             <ul className="text-secondary space-y-2 md:flex flex-row gap-8">
-//               <li>React.js/vite</li>
-//               <li>Next.js</li>
-//               <li>TypeScript</li>
-//               <li>Tailwind CSS</li>
-//             </ul>
-//           </motion.div>
-
-//           <motion.div
-//             className="bg-white dark:bg-dark p-6 rounded-lg shadow-md"
-//             variants={fadeInUp}
-//             {...cardHover}
-//           >
-//             <FaGraduationCap className="h-8 w-8 text-primary mb-4" />
-//             <h3 className="text-xl font-semibold mb-2">Tools & Others</h3>
-//             <ul className="text-secondary space-y-2 md:flex flex-row gap-8">
-//               <li>Git / GitHub</li>
-//               <li>CSS animations</li>
-//             </ul>
-//           </motion.div>
-//         </motion.div>
-//       </motion.section>
-//     </section>
-//   );
-// };
-
-// export default Skills;
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -79,18 +11,15 @@ import {
   SiCss3,
   SiFramer,
   SiVite,
+  SiHtml5,
+  SiJavascript,
+  SiFirebase,
 } from "react-icons/si";
-import {
-  fadeInUp,
-  // fadeInDown,
-  // fadeIn,
-  // staggerContainer,
-  // cardHover,
-  // cardHoverSmall,
-} from "@/utils/animations";
 
-const icons = [
+const skills = [
+  { icon: <SiHtml5 className="text-purple-500" />, name: "HTML" },
   { icon: <SiCss3 className="text-blue-400" />, name: "CSS3" },
+  { icon: <SiJavascript className="text-sky-400" />, name: "JavaScript" },
   { icon: <SiTailwindcss className="text-cyan-400" />, name: "Tailwind" },
   { icon: <SiReact className="text-sky-400" />, name: "React" },
   { icon: <SiVite className="text-purple-500" />, name: "Vite" },
@@ -100,6 +29,7 @@ const icons = [
   },
   { icon: <SiTypescript className="text-blue-500" />, name: "TypeScript" },
   { icon: <SiFramer className="text-pink-500" />, name: "Framer Motion" },
+  { icon: <SiFirebase className="text-orange-500" />, name: "Firebase" },
   { icon: <SiGit className="text-orange-500" />, name: "Git" },
   {
     icon: <SiGithub className="text-gray-800 dark:text-gray-100" />,
@@ -111,111 +41,60 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      // className="relative overflow-hidden py-24 bg-gradient-to-b from-dark via-dark/80 to-black text-center"
-      className="relative overflow-hidden py-24 bg-white dark:bg-dark/50 shadow-md text-center"
+      className="relative py-18 text-center bg-gradient-to-br from-background to-muted/30 backdrop-blur-sm"
     >
       {/* Title */}
       <motion.h2
-        className="mb-16 section-title"
-        {...fadeInUp}
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mb-12 text-4xl font-semibold tracking-tight"
       >
-        My Skills
+        My Skills & Tools
       </motion.h2>
 
-      <div className="relative space-y-16">
-        {/* Top row */}
-        <motion.div
-          className="flex gap-15 justify-around cursor-grab active:cursor-grabbing"
-          drag="x" // ← enables horizontal dragging
-          dragConstraints={{ left: -300, right: 300 }} // limits how far you can drag
-          animate={{
-            x: ["10%", "-100%"],
-          }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 25, // slower movement for better UX
-              ease: "linear",
-            },
-          }}
-        >
-          {icons.map((skill, i) => (
+      {/* Container */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="mx-auto max-w-5xl grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 gap-10 p-10 bg-white/5 rounded-3xl backdrop-blur-sm border border-white/10 shadow-lg"
+      >
+        {skills.map((skill, i) => (
+          <motion.div
+            key={i}
+            whileHover={{
+              y: -6,
+              scale: 1.08,
+              transition: { duration: 0.2 },
+            }}
+            className="flex flex-col items-center justify-center gap-3 p-4 rounded-xl hover:bg-white/5 transition-colors duration-300"
+          >
+            {/* Smooth Bounce Animation */}
             <motion.div
-              key={`top-${i}`}
-              whileHover={{
-                scale: 1.4,
-                rotate: 10,
-                y: -10,
-                filter: "drop-shadow(0px 0px 15px rgba(40, 139, 247,0.8))",
+              animate={{
+                y: [0, -8, 0],
               }}
-              className="flex flex-col items-center justify-center text-5xl cursor-pointer"
-              style={{ perspective: 1000 }}
+              transition={{
+                duration: 2 + i * 0.15, // staggered timing for natural rhythm
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              whileHover={{ rotate: 5 }}
+              className="text-5xl drop-shadow-[0_0_6px_rgba(59,130,246,0.3)]"
             >
-              <motion.div
-                animate={{
-                  rotateY: [0, 360],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 12,
-                  ease: "linear",
-                }}
-              >
-                {skill.icon}
-              </motion.div>
-              <span className="text-sm text-gray-300 mt-2">{skill.name}</span>
+              {skill.icon}
             </motion.div>
-          ))}
-        </motion.div>
 
-        {/* Bottom row (opposite direction, slower, tilted) */}
-        {/* <motion.div
-          className="flex gap-10 justify-around rotate-1"
-          animate={{
-            x: ["-100%", "0%"],
-          }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: "loop",
-              duration: 40,
-              ease: "linear",
-            },
-          }}
-        >
-          {icons.map((skill, i) => (
-            <motion.div
-              key={`bottom-${i}`}
-              whileHover={{
-                scale: 1.3,
-                rotate: -10,
-                y: 10,
-                filter: "drop-shadow(0px 0px 12px rgba(255,255,255,1))",
-              }}
-              className="flex flex-col items-center justify-center text-5xl cursor-pointer"
-              style={{ perspective: 1000 }}
-            >
-              <motion.div
-                animate={{
-                  rotateY: [360, 0],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 18,
-                  ease: "linear",
-                }}
-              >
-                {skill.icon}
-              </motion.div>
-              <span className="text-sm text-gray-400 mt-2">{skill.name}</span>
-            </motion.div>
-          ))}
-        </motion.div> */}
-      </div>
+            <span className="text-sm text-gray-300 font-medium">
+              {skill.name}
+            </span>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Subtle bottom line */}
+      <div className="absolute bottom-0 left-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-blue-400/50 to-transparent -translate-x-1/2" />
     </section>
   );
 };

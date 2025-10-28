@@ -1,78 +1,131 @@
 "use client";
 
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
-// import { fadeInUp, fadeIn, scaleIn } from "../../utils/animations";
+import { Github, Linkedin, Twitter, ArrowRight } from "lucide-react";
+import { fadeInUp } from "@/utils/animations";
 
-const GetInTouch = () => {
+const socials = [
+  { name: "GitHub", icon: Github, href: "https://github.com/steph-ayo" },
+  {
+    name: "LinkedIn",
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/stephen-popoola-b90990233",
+  },
+  { name: "X (Twitter)", icon: Twitter, href: "https://x.com/ayo_omopopoola" },
+];
+
+const quickLinks = [
+  { name: "Projects", href: "/projects" },
+  { name: "Skills", href: "/#skills" },
+  { name: "Contact", href: "/contact" },
+];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
+  }),
+};
+
+export default function GetInTouch() {
   return (
-    <section className="p-5 mb-15 mt-15 gap-10 flex flex-col md:flex-col lg:flex-row justify-between">
-      <div className="">
-        <h3 className="text-lg md:text-xl mb-4">
-          Based in Lagos, working worldwide.
+    <section className="px-6 pt-20 pb-10 md:px-12 bg-gradient-to-br from-background to-muted/30  backdrop-blur-sm flex flex-col lg:flex-row justify-between items-start gap-16">
+      {/* LEFT SIDE */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        className="flex-1"
+      >
+        <h3 className="text-lg md:text-xl text-muted-foreground mb-4">
+          Working worldwide 🌍
         </h3>
-        <h1 className="text-4xl md:text-7xl underline">
-          <Link href="/contact">Get in touch</Link>
-        </h1>
-      </div>
 
-      <div className="w-full md:w-3/5 flex flex-row md:flex-row gap-15 md:gap-40 lg:pl-20">
-        {/* Socials */}
-        <div className="gap-4">
+        <motion.h1
+          whileHover={{ x: 5 }}
+          className="text-5xl md:text-7xl font-bold relative inline-block"
+        >
+          <Link
+            href="/contact"
+            className="group underline decoration-transparent hover:decoration-current transition-all duration-500"
+          >
+            Get in touch
+            <ArrowRight className="inline-block ml-3 size-6 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.h1>
+      </motion.div>
+
+      {/* RIGHT SIDE */}
+      <div className="flex flex-col sm:flex-row gap-12 md:gap-24 flex-1">
+        {/* SOCIALS */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <h3 className="text-lg md:text-xl font-semibold mb-6">Socials</h3>
-          <motion.a
-            href="https://github.com/steph-ayo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex gap-2 text-md md:text-lg font-thin mb-3 text-gray-600  dark:text-gray-300 transition-colors"
-            // whileHover={{ scale: 1.2 }}
-            // whileTap={{ scale: 0.9 }}
-          >
-            <FaGithub />
-            <p>Github</p>
-          </motion.a>
-          <motion.a
-            href="https://www.linkedin.com/in/stephen-popoola-b90990233"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex gap-2 text-md md:text-lg font-thin mb-3 text-gray-600 dark:text-gray-300 transition-colors"
-            // whileHover={{ scale: 1.2 }}
-            // whileTap={{ scale: 0.9 }}
-          >
-            <FaLinkedin />
-            <p>LinkedIn</p>
-          </motion.a>
-          <motion.a
-            href="https://x.com/ayo_omopopoola"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex gap-2 text-md md:text-lg font-thin text-gray-600  dark:text-gray-300  transition-colors"
-            // whileHover={{ scale: 1.2 }}
-            // whileTap={{ scale: 0.9 }}
-          >
-            <FaXTwitter />
-            <p>X (formerly Twitter)</p>
-          </motion.a>
-        </div>
+          <ul>
+            {socials.map(({ name, icon: Icon, href }, i) => (
+              <motion.li
+                key={name}
+                custom={i}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="mb-3"
+              >
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 group text-gray-600 dark:text-gray-300 hover:text-primary transition-all"
+                >
+                  <motion.div className=" flex gap-2 group-hover:translate-x-1 transition-transform">
+                    <Icon className="size-5" />
+                    <span className="">{name}</span>
+                  </motion.div>
+                </a>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
 
-        {/* Quick links */}
-        <div>
+        {/* QUICK LINKS */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           <h3 className="text-lg md:text-xl font-semibold mb-6">Quick Links</h3>
-
-          <Link href="/projects">
-            <p className="text-md md:text-lg font-thin mb-3">Projects</p>
-          </Link>
-          <Link href="/#skills">
-            <p className="text-md md:text-lg font-thin mb-3">Skills</p>
-          </Link>
-          <Link href="/contact">
-            <p className="text-md md:text-lg font-thin">Contact</p>
-          </Link>
-        </div>
+          <ul>
+            {quickLinks.map(({ name, href }, i) => (
+              <motion.li
+                key={name}
+                custom={i}
+                variants={fadeInUp}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="mb-3"
+              >
+                <Link
+                  href={href}
+                  className="text-gray-600 dark:text-gray-300 hover:text-primary transition-all flex items-center gap-2 group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform">
+                    {name}
+                  </span>
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
       </div>
     </section>
   );
-};
-
-export default GetInTouch;
+}

@@ -22,7 +22,7 @@ export default function Hero() {
         <ParticlesComponent />
       </div>
 
-      <div className="container max-w-7xl mx-auto px-6">
+      <div className="container max-w-7xl mx-auto px-10">
         <motion.div
           className=" max-w-3xl mx-auto text-left md:text-center"
           variants={staggerContainer}

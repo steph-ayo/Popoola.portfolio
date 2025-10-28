@@ -2,6 +2,22 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    title: "TelemedRx",
+    description:
+      "A streamlined operations dashboard that automates the flow of medication requests between telemedicine, contact center, pharmacy, and billing teams. It replaces manual WhatsApp and email coordination with real-time tracking, status updates, and data synchronization.",
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Firebase",
+      "Google Sheets API",
+      "Zapier Automation",
+    ],
+    githubLink: "https://github.com/steph-ayo/TelemedRx",
+    demoLink: "https://github.com/steph-ayo/TelemedRx",
+    image: "/projects/telemedRx.png",
+  },
+  {
     title: "Zea.lify",
     description:
       "A modern marketing website for a custom clothing brand, featuring product showcases, customization options, and secure online payments.",
@@ -24,22 +40,6 @@ export const projects: Project[] = [
     githubLink: "https://github.com/steph-ayo/ShopCart",
     demoLink: "https://shop-cart-five-ashen.vercel.app/",
     image: "/projects/shopcart.png",
-  },
-
-  {
-    title: "TelemedRx",
-    description:
-      "A streamlined operations dashboard that automates the flow of medication requests between telemedicine, contact center, pharmacy, and billing teams. It replaces manual WhatsApp and email coordination with real-time tracking, status updates, and data synchronization.",
-    technologies: [
-      "React.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Google Sheets API",
-      "Zapier Automation",
-    ],
-    githubLink: "https://github.com",
-    demoLink: "https://demo.com",
-    image: "/projects/telemedRx.png",
   },
 
   {

@@ -11,7 +11,7 @@ import GetInTouch from "../components/GetInTouch";
 export default function Projects() {
   return (
     <>
-      <section className="py-20 border-b border-gray-200 dark:border-gray-600 ">
+      <section className="py-10 border-b border-gray-200 dark:border-gray-600 ">
         <div className="container max-w-7xl mx-auto px-4">
           <motion.h2
             className="text-4xl font-bold mb-6 text-center"
