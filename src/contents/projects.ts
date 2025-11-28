@@ -14,7 +14,7 @@ export const projects: Project[] = [
       "Zapier Automation",
     ],
     githubLink: "https://github.com/steph-ayo/TelemedRx",
-    demoLink: "https://github.com/steph-ayo/TelemedRx",
+    demoLink: "https://telemedrx.vercel.app/",
     image: "/projects/telemedRx.png",
   },
   {
