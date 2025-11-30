@@ -98,7 +98,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-md placeholder:text-sm placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-md placeholder:text-sm placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark"
                 />
               </motion.div>
 
@@ -117,7 +117,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 rounded-md placeholder:text-sm placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-md placeholder:text-sm placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark"
                 />
               </motion.div>
 
@@ -136,7 +136,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-2 rounded-md placeholder:text-sm placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark focus:ring-2 focus:ring-primary focus:border-transparent"
+                  className="w-full px-4 py-2 rounded-md placeholder:text-sm placeholder:text-white/50 border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark"
                 />
               </motion.div>
 

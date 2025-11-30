@@ -35,12 +35,6 @@ export default function About() {
           <motion.div
             className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl ring-4 ring-primary/30"
             whileHover={{ scale: 1.05, rotate: 3 }}
-            // animate={{ y: [0, -10, 0] }}
-            // transition={{
-            //   repeat: Infinity,
-            //   duration: 6,
-            //   ease: "easeInOut",
-            // }}
           >
             <Image
               src={popoola}
