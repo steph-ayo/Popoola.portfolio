@@ -8,14 +8,6 @@ import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/utils/animations";
 
 export default function Projects() {
-  // const [filter, setFilter] = useState("all");
-
-  // Extract unique categories (optional - remove if not needed)
-  // const categories = [
-  //   "all",
-  //   ...new Set(projects.flatMap((p) => p.categories || [])),
-  // ];
-
   return (
     <section className="py-18 bg-gradient-to-b from-transparent to-gray-50 dark:to-dark/30">
       <div className="container max-w-7xl mx-auto px-4">

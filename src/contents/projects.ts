@@ -2,7 +2,7 @@ import { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    title: "TelemedRx",
+    title: "Leadway Health - TelemedRx",
     description:
       "A streamlined operations dashboard that automates the flow of medication requests between telemedicine, contact center, pharmacy, and billing teams. It replaces manual WhatsApp and email coordination with real-time tracking, status updates, and data synchronization.",
     technologies: [
@@ -10,8 +10,7 @@ export const projects: Project[] = [
       "TypeScript",
       "Tailwind CSS",
       "Firebase",
-      "Google Sheets API",
-      "Zapier Automation",
+      "Firebase Store",
     ],
     githubLink: "https://github.com/steph-ayo/TelemedRx",
     demoLink: "https://telemedrx.vercel.app/",
