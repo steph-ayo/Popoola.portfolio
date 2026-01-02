@@ -29,7 +29,7 @@ export const projects: Project[] = [
       "Stripe",
     ],
     githubLink: "https://github.com/steph-ayo/Zea.lify",
-    demoLink: "https://github.com/steph-ayo/Zea.lify",
+    demoLink: "https://zealify-woad.vercel.app/",
     image: "/projects/zea.lify.png",
   },
   {
