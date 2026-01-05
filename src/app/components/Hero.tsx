@@ -143,15 +143,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import {
-  fadeInUp,
-  fadeIn,
-  fadeInDown,
-  slideInLeft,
-  slideInRight,
-  scaleIn,
-  staggerContainer,
-} from "../../utils/animations";
+import { fadeInUp, scaleIn, staggerContainer } from "../../utils/animations";
 
 export default function Hero() {
   return (
