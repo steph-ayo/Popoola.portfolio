@@ -212,9 +212,9 @@ export default function Hero() {
               "React",
               "Next.js",
               "TypeScript",
-              "Tailwind CSS",
-              "Firebase",
               "Node.js",
+              "Firebase",
+              "MongoDB",
             ].map((skill, index) => (
               <motion.span
                 key={skill}
