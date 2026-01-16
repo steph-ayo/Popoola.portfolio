@@ -81,7 +81,7 @@ export default function Projects() {
             >
               I’m a{" "}
               <span className="font-semibold text-primary">
-                Frontend Engineer
+                Full-stack Engineer
               </span>{" "}
               driven by one principle;{" "}
               <span className="italic text-foreground">
@@ -90,7 +90,7 @@ export default function Projects() {
               .
               <br />
               <br />
-              Over the past two years, I’ve built clean, clean, responsive, and
+              For about 3+ years, I’ve built clean, clean, responsive, and
               user-focused interfaces that are not just functional, but deeply
               intuitive.
               <br />
