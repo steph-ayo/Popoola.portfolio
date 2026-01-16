@@ -185,7 +185,9 @@ export default function Hero() {
               <span className="block text-gray-800 dark:text-white">
                 Popoola Stephen
               </span>
-              <span className="block text-primary mt-2">Frontend Engineer</span>
+              <span className="block text-primary mt-2">
+                FullStack Engineer
+              </span>
             </motion.h1>
           </motion.div>
 
@@ -206,20 +208,25 @@ export default function Hero() {
             {...fadeInUp}
             transition={{ delay: 0.6 }}
           >
-            {["React", "Next.js", "TypeScript", "Tailwind CSS", "Firebase"].map(
-              (skill, index) => (
-                <motion.span
-                  key={skill}
-                  className="px-4 py-2 bg-gray-100 dark:bg-dark/50 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium border border-gray-200 dark:border-gray-700"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, borderColor: "var(--primary)" }}
-                >
-                  {skill}
-                </motion.span>
-              )
-            )}
+            {[
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Firebase",
+              "Node.js",
+            ].map((skill, index) => (
+              <motion.span
+                key={skill}
+                className="px-4 py-2 bg-gray-100 dark:bg-dark/50 text-gray-700 dark:text-gray-300 rounded-lg text-sm font-medium border border-gray-200 dark:border-gray-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7 + index * 0.1 }}
+                whileHover={{ scale: 1.05, borderColor: "var(--primary)" }}
+              >
+                {skill}
+              </motion.span>
+            ))}
           </motion.div>
 
           {/* CTA Buttons */}
